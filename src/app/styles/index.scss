@@ -1,0 +1,28 @@
+@import './reset.scss';
+@import './variables/global.scss';
+@import './themes/normal.scss';
+@import './themes/dark.scss';
+
+.app {
+	font: var(--font-m);
+
+	background: var(--bg-color);
+	color: var(--primary-color);
+
+	min-height: 100vh;
+}
+.content-page {
+	display: flex;
+}
+.page-wrapper {
+	flex-grow: 1;
+	padding: 20px;
+}
+.btn {
+	border-radius: 80px;
+	font-size: 16px;
+	font-weight: 400;
+	width: 70px;
+	height: 34px;
+	background-color: var(--button-primary);
+}

@@ -9,6 +9,7 @@ export default (env: BuildEnv) => {
 		build: path.resolve(__dirname, './dist'),
 		html: path.resolve(__dirname, 'public', 'index.html'),
 		outPutPath: path.resolve(__dirname, './dist'),
+		src: path.resolve(__dirname, 'src'),
 	};
 	const mode = env.mode || 'development';
 	const PORT = env.port || 3000;

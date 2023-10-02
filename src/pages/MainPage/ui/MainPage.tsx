@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
+import { useTranslation } from "react-i18next";
 
-const MainPage = () => {
-	return (
-		<div>MainPage</div>
-	)
-}
+const MainPage = (): JSX.Element => {
+    const { t } = useTranslation("main");
+    return <div>{t("Main Page")}</div>;
+};
 
-export default MainPage
+export default MainPage;

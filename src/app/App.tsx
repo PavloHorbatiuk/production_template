@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import { useTheme } from "app/providers/ThemeProvider";
 import { AppRouter } from "./providers/router";
 import { classNames } from "shared/lib/classNames/classNames";

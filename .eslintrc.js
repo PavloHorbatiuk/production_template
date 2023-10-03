@@ -9,7 +9,8 @@ module.exports = {
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
         'prettier',
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
+        "plugin:react/jsx-runtime"
     ],
     "overrides": [
         {
@@ -30,7 +31,7 @@ module.exports = {
     },
     "plugins": [
         "react",
-        'prettier'
+        'prettier',
     ],
     "rules": {
         'linebreak-style': 'off',
@@ -39,7 +40,6 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'warn',
-        // "indent": [2, 4],
         "react/require-default-props": "off",
         'react/react-in-jsx-scope': 'off',
         "arrow-body-style": "off",

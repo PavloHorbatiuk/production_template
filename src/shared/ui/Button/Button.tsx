@@ -1,4 +1,5 @@
-import React, { type ButtonHTMLAttributes, type ReactNode } from "react";
+import type React from "react";
+import { type ButtonHTMLAttributes, type ReactNode } from "react";
 import cls from "./Button.module.scss";
 import { classNames } from "shared/lib/classNames/classNames";
 

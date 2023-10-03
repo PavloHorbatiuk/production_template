@@ -1,5 +1,4 @@
 import { useTheme } from "app/providers/ThemeProvider/lib/useTheme";
-import React from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import cls from "./ThemeSwitcher.module.scss";
 import ThemeIcon from "shared/assets/icons/themeSvg.svg";

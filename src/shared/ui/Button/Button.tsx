@@ -5,6 +5,7 @@ import { classNames } from "shared/lib/classNames/classNames";
 
 export enum ThemeButton {
     CLEAR = "clear",
+    BLACK = "black",
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -15,9 +16,10 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const Button: React.FC<ButtonProps> = (props) => {
     const { className, children, theme, ...otherProps } = props;
+    const themeClass = theme != null ? cls[theme] : "";
     return (
         <button
-            className={classNames(cls.Button, {}, [cls[typeof theme]])}
+            className={classNames(cls.Button, {}, [themeClass])}
             {...otherProps}
         >
             {children}

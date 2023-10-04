@@ -36,6 +36,14 @@ const config: Config = {
     testMatch: ["<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)"],
     // The root directory that Jest should scan for tests and modules within
     rootDir: "../../",
+
+    modulePaths: ["<rootDir>src"],
+
+    setupFilesAfterEnv: ["<rootDir>config/jest/setupTests.ts"],
+    moduleNameMapper: {
+        "\\.s?css$": "identity-obj-proxy",
+    },
+    testEnvironment: "jsdom",
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 

@@ -9,10 +9,6 @@ interface UseThemeResult {
 export const useTheme = (): UseThemeResult => {
     const { setTheme, theme } = useContext(ThemeContext);
 
-    if (theme === undefined) {
-        throw new Error("Theme is undefined");
-    }
-
     const toggleTheme = (): void => {
         const newTheme = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
         setTheme?.(newTheme);

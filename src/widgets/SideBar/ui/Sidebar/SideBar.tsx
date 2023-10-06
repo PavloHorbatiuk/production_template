@@ -28,7 +28,7 @@ export const SideBar = ({ className }: SidebarProps): JSX.Element => {
             </Button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
-                <LangSwitcher className={cls.lang} />
+                <LangSwitcher isIconShow={collapsed} className={cls.lang} />
             </div>
         </div>
     );

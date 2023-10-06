@@ -7,9 +7,13 @@ import LanguageIcon from "../assets/icons/language_icon.svg";
 
 interface LangSwitcherProps {
     className?: string;
+    isIconShow?: boolean;
 }
 
-export const LangSwitcher = ({ className }: LangSwitcherProps): JSX.Element => {
+export const LangSwitcher = ({
+    className,
+    isIconShow,
+}: LangSwitcherProps): JSX.Element => {
     const { t, i18n } = useTranslation();
     const toggle = async (): Promise<void> => {
         await i18n.changeLanguage(i18n.language === "ua" ? "en" : "ua");
@@ -17,7 +21,7 @@ export const LangSwitcher = ({ className }: LangSwitcherProps): JSX.Element => {
 
     return (
         <div className={classNames(cls.LangSwitcher, {}, [className ?? ""])}>
-            <LanguageIcon />
+            {!isIconShow && <LanguageIcon />}
             <Button theme={ThemeButton.CLEAR} onClick={toggle}>
                 {t("Language")}
             </Button>

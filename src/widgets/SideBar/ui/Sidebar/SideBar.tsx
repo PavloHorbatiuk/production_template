@@ -23,7 +23,7 @@ export const SideBar = ({ className }: SidebarProps): JSX.Element => {
                 className ?? "",
             ])}
         >
-            <Button theme={ThemeButton.RED} onClick={onToggle}>
+            <Button theme={ThemeButton.OUTLINE} onClick={onToggle}>
                 toggle
             </Button>
             <div className={cls.switchers}>

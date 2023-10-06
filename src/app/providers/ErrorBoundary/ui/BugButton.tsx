@@ -16,7 +16,7 @@ export const BugButton = (): JSX.Element => {
     }, [error]);
     return (
         <div>
-            <Button theme={ThemeButton.RED} onClick={onTrhow}>
+            <Button theme={ThemeButton.BLACK} onClick={onTrhow}>
                 thow error
             </Button>
         </div>

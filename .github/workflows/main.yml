@@ -30,13 +30,13 @@ jobs:
         with:
           cmd: install
       - name: Build production project
-        run: npm run build:prod
+        run: yarn run build:prod
 
       - name: Linting TypeScript
-        run: npm run lint
+        run: yarn run lint
 
       - name: Linting CSS
-        run: npm run stylelint
+        run: yarn run stylelint
 
       - name: Testing unit
-        run: npm run test:unit
+        run: yarn run test:unit

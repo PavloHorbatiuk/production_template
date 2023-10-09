@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "shared/ui";
-import { ThemeButton } from "shared/ui/Button/Button";
+import { ButtonTheme } from "shared/ui/Button/Button";
 
 // component for testig ErrorBoundary
 export const BugButton = (): JSX.Element => {
@@ -16,7 +16,7 @@ export const BugButton = (): JSX.Element => {
     }, [error]);
     return (
         <div>
-            <Button theme={ThemeButton.BLACK} onClick={onTrhow}>
+            <Button theme={ButtonTheme.BLACK} onClick={onTrhow}>
                 thow error
             </Button>
         </div>

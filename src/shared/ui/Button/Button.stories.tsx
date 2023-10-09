@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button, type ButtonProps, ThemeButton } from "./Button";
+import { Button, type ButtonProps, ButtonTheme, ButtonSize } from "./Button";
 
 const meta = {
     title: "shared/Button",
@@ -9,23 +9,61 @@ const meta = {
         layout: "centered",
     },
     tags: ["autodocs"],
-    argTypes: {
-        theme: { control: "color" },
-    },
 } satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<ButtonProps>;
 
-export const CLEAR: Story = {
+export const Outline: Story = {
     args: {
         children: "Text",
-        theme: ThemeButton.CLEAR,
+        theme: ButtonTheme.OUTLINE,
     },
 };
 export const Black: Story = {
+    name: "Balck button",
     args: {
         children: "Text",
-        theme: ThemeButton.BLACK,
+        theme: ButtonTheme.BLACK,
+    },
+};
+export const Background: Story = {
+    args: {
+        children: "Text",
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        square: true,
+        size: ButtonSize.M,
+    },
+};
+export const BackgroundInverted: Story = {
+    args: {
+        children: "Text",
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        size: ButtonSize.M,
+        square: true,
+    },
+};
+export const SquareSizeM: Story = {
+    args: {
+        children: ">",
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        square: true,
+        size: ButtonSize.M,
+    },
+};
+export const SquareSizeL: Story = {
+    args: {
+        children: ">",
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        square: true,
+        size: ButtonSize.L,
+    },
+};
+export const SquareSizeXL: Story = {
+    args: {
+        children: ">",
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        square: true,
+        size: ButtonSize.XL,
     },
 };

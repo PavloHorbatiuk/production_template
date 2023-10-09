@@ -17,7 +17,7 @@ const ThemeSwitcher = ({ className }: ThemeSwitcherProps): JSX.Element => {
     return (
         <Button
             theme={ThemeButton.CLEAR}
-            className={classNames(cls.ThemeSwitcher, {}, [className ?? ""])}
+            className={classNames("", {}, [className ?? ""])}
             onClick={toggleTheme}
         >
             <ThemeIcon className={classNames(cls.icon, {}, [setColor])} />

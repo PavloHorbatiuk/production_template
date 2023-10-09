@@ -10851,7 +10851,7 @@ postcss-scss@^1.0.2:
   dependencies:
     postcss "^6.0.23"
 
-postcss-scss@^4.0.7:
+postcss-scss@^4.0.7, postcss-scss@^4.0.9:
   version "4.0.9"
   resolved "https://registry.yarnpkg.com/postcss-scss/-/postcss-scss-4.0.9.tgz#a03c773cd4c9623cb04ce142a52afcec74806685"
   integrity sha512-AjKOeiwAitL/MXxQW2DliT28EKukvvbEWx3LBmJIRN8KfBGZbRTxNYW0kSqi1COiTZ57nZ9NW06S6ux//N1c9A==

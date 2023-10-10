@@ -31,12 +31,12 @@ jobs:
           cmd: install
       - name: Build production project
         run: yarn run build:prod
-
+        if: always()
       - name: Linting TypeScript
         run: yarn run lint
-
+        if: always()
       - name: Linting CSS
         run: yarn run stylelint
-
+        if: always()
       - name: Testing unit
         run: yarn run test:unit

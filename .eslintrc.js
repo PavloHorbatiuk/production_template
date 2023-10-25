@@ -33,6 +33,7 @@ module.exports = {
 	"plugins": [
 		"react",
 		'prettier',
+		"react-hooks",
 	],
 	"rules": {
 		'linebreak-style': 'off',
@@ -55,5 +56,7 @@ module.exports = {
 		],
 		"react/prop-types": "off",
 		'@typescript-eslint/strict-boolean-expressions': 0,
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "error"
 	}
 }

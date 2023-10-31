@@ -29,6 +29,7 @@ export function buildPlugins({
             new BundleAnalyzerPlugin({
                 // flag to on or off bundleAnalyzer
                 openAnalyzer: false,
+                analyzerPort: 4000,
             })
         );
     }

@@ -1,3 +1,5 @@
+@import './../../../app/styles/variables/global.scss';
+
 .Modal {
 	position: fixed;
 	top: 0;
@@ -7,6 +9,15 @@
 	z-index: -1;
 	opacity: 0;
 	pointer-events: none;
+}
+
+.Modal.dark {
+	--bg-color: #090949;
+	--primary-color: #04ff04;
+}
+
+.Modal.normal {
+	--bg-color: #e5e5e9;
 }
 
 .overlay {

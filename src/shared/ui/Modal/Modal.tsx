@@ -8,7 +8,8 @@ import {
     useCallback,
 } from "react";
 import Portal from "../Portal/Portal";
-interface ModalProps {
+import { useTheme } from "app/providers/ThemeProvider";
+export interface ModalProps {
     className?: string;
     children?: ReactNode;
     isOpen?: boolean;
@@ -19,9 +20,11 @@ const ANIMATION_DELAY = 300;
 export const Modal: React.FC<ModalProps> = (props): JSX.Element => {
     const { className, children, isOpen, onClose } = props;
     const [isClosing, setIsClosing] = useState(false);
+    const { theme } = useTheme();
     const mods: Record<string, boolean | undefined> = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
+        [cls[theme]]: true,
     };
 
     const timeRef = useRef<ReturnType<typeof setTimeout>>();

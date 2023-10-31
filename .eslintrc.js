@@ -57,6 +57,7 @@ module.exports = {
 		"react/prop-types": "off",
 		'@typescript-eslint/strict-boolean-expressions': 0,
 		"react-hooks/rules-of-hooks": "error",
-		"react-hooks/exhaustive-deps": "error"
+		"react-hooks/exhaustive-deps": "error",
+		"@typescript-eslint/explicit-function-return-type": "off"
 	}
 }

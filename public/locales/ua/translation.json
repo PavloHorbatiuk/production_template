@@ -2,5 +2,7 @@
 	"Language": "UA",
 	"Page not found": "Сторінка не знайдена",
 	"Reload page": "Перезагрузити сторінку",
-	"Somthing went wrong": "Відбулася непередбачувана помилка"
+	"Somthing went wrong": "Відбулася непередбачувана помилка",
+	"Decrement": "Зменшення",
+	"Increment": "Збільшення"
 }

@@ -1,0 +1,21 @@
+.customInput {
+	position: relative;
+	width: 400px;
+	height: 48px;
+	padding: 0 16px;
+	overflow: hidden;
+	color: rgb(35 38 59);
+	font-size: 14px;
+	line-height: 20px;
+	background-color: #FFF;
+	border: 1px solid #D6D6E7;
+	border-radius: 3px;
+	box-shadow: inset 0 1px 4px 0 rgb(119 122 175 / 30%);
+	cursor: text;
+	transition: all 100ms ease-in-out;
+
+	&:focus {
+		border-color: #3C4FE0;
+		box-shadow: 0 1px 0 0 rgb(35 38 59 / 5%);
+	}
+}

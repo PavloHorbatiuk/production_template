@@ -1,39 +1,32 @@
 import { classNames } from "shared/lib/classNames/classNames";
 import cls from "./Navbar.module.scss";
-import { Modal } from "shared/ui/Modal/Modal";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { Button } from "shared/ui";
 import { ButtonTheme } from "shared/ui/Button/Button";
+import LoginModal from "features/ui/loginModal/LoginModal";
 
 interface NavbarProps {
     className?: string;
 }
 
 export const Navbar = ({ className }: NavbarProps): JSX.Element => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isAuthModal, setisAuthModal] = useState(false);
+
+    const onCloseModal = useCallback(() => {
+        setisAuthModal(false);
+    }, []);
+
+    const onShowModal = useCallback(() => {
+        setisAuthModal(true);
+    }, []);
 
     return (
         <div className={classNames(cls.navbar, {}, [className ?? ""])}>
             <div className={cls.links}>
-                <Button
-                    theme={ButtonTheme.OUTLINE}
-                    onClick={() => {
-                        setIsOpen(true);
-                    }}
-                >
+                <Button theme={ButtonTheme.OUTLINE} onClick={onShowModal}>
                     Login
                 </Button>
-                <Modal
-                    isOpen={isOpen}
-                    onClose={() => {
-                        setIsOpen(false);
-                    }}
-                >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Impedit enim sint temporibus quod illum praesentium ducimus
-                    voluptas deserunt ea repellat neque quisquam accusantium
-                    laborum voluptates facere, nulla aliquid cupiditate.
-                </Modal>
+                <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
             </div>
         </div>
     );

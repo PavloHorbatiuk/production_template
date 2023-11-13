@@ -18,5 +18,11 @@
 		"titleBar.inactiveBackground": "#2b2d4299",
 		"titleBar.inactiveForeground": "#e7e7e799"
 	},
-	"peacock.color": "#2b2d42"
+	"peacock.color": "#2b2d42",
+	"scss.validate": false,
+	"css.validate": false,
+	"less.validate": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.stylelint": true
+	}
 }

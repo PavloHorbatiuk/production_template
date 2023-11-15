@@ -9,6 +9,7 @@ import {
 } from "react";
 import Portal from "../Portal/Portal";
 import { useTheme } from "app/providers/ThemeProvider";
+
 export interface ModalProps {
     className?: string;
     children?: ReactNode;

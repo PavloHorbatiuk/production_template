@@ -1,16 +1,17 @@
-@import './reset';
-@import './variables/global';
-@import './themes/normal';
-@import './themes/dark';
+@import "reset";
+@import "variables/global";
+@import "themes/normal";
+@import "themes/dark";
 
-body {
-	color: var(--primary-color);
+.app,
+.app_modal {
 	font: var(--font-m);
+	color: var(--primary-color);
 }
 
 .app {
-	min-height: 100vh;
 	background: var(--bg-color);
+	min-height: 100vh;
 }
 
 .content-page {
@@ -20,13 +21,4 @@ body {
 .page-wrapper {
 	flex-grow: 1;
 	padding: 20px;
-}
-
-.btn {
-	width: 70px;
-	height: 34px;
-	font-weight: 400;
-	font-size: 16px;
-	background-color: var(--button-primary);
-	border-radius: 80px;
 }

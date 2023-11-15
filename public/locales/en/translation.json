@@ -5,5 +5,7 @@
 	"Somthing went wrong": "Somthing went wrong",
 	"Decrement": "Decrement",
 	"Increment": "Increment",
-	"Enter": "Enter"
+	"Enter": "Enter",
+	"Enter username": "Enter username",
+	"Enter password": "Enter password"
 }

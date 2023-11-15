@@ -5,5 +5,7 @@
 	"Somthing went wrong": "Відбулася непередбачувана помилка",
 	"Decrement": "Зменшення",
 	"Increment": "Збільшення",
-	"Enter": "Увійти"
+	"Enter": "Увійти",
+	"Enter username": "Введіть ім'я",
+	"Enter password": "Введіть пароль"
 }

@@ -1,3 +1,5 @@
-import LoginModel from "./loginModal/LoginModal";
+import LoginModal from "./loginModal/LoginModal";
+import { type LoginSchema } from "features/AuthByUserName/model/types/LoginSchema";
+import { loginReducer } from "features/AuthByUserName/model/slice/loginSlice";
 
-export { LoginModel };
+export { LoginModal, type LoginSchema, loginReducer };

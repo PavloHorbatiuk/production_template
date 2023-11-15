@@ -12,6 +12,7 @@ interface IProps {
 export const StoreProvider: React.FC<IProps> = (props: IProps) => {
     const { children, initialState } = props;
     const store = createReduxStore(initialState as StateSchema);
+
     return <Provider store={store}>{children}</Provider>;
 };
 

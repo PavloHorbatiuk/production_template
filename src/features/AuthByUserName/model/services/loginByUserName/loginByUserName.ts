@@ -1,6 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { userAcitions, type User } from "app/entities/User";
 import axios from "axios";
+
 import { USER_LOCALSTORAGE_KEY } from "shared/const/localStorage";
 
 interface LoginByUsernameProps {
@@ -30,6 +31,6 @@ export const loginByUsername = createAsyncThunk<
         return response.data;
     } catch (error) {
         console.error(error);
-        return thunkAPI.rejectWithValue("Неправельний пароль або логін");
+        return thunkAPI.rejectWithValue("Wrong login or password");
     }
 });

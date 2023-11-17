@@ -7,5 +7,7 @@
 	"Increment": "Збільшення",
 	"Enter": "Увійти",
 	"Enter username": "Введіть ім'я",
-	"Enter password": "Введіть пароль"
+	"Enter password": "Введіть пароль",
+	"Wrong login or password": "Неправельний пароль або логін",
+	"Login": "Логін"
 }

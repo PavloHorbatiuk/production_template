@@ -29,3 +29,4 @@ export function createReduxStore(initialState?: StateSchema) {
 }
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type AppThunkDispatch = ThunkDispatch<StateSchema, any, AnyAction>;
+export type AppDispatch = ReturnType<typeof createReduxStore>["dispatch"];

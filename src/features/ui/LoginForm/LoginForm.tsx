@@ -24,13 +24,17 @@ import {
 
 export interface LoginProps {
     className?: string;
+    onSuccess: () => void;
 }
 
 const initialReducers: ReducerList = {
     login: loginReducer,
 };
 
-const LoginForm = React.memo(function LoginForm({ className }: LoginProps) {
+const LoginForm = React.memo(function LoginForm({
+    className,
+    onSuccess,
+}: LoginProps) {
     const { t } = useTranslation();
     const dispatch = useDispatch<AppThunkDispatch>();
     const username = useSelector(getLoginUsername);
@@ -52,9 +56,12 @@ const LoginForm = React.memo(function LoginForm({ className }: LoginProps) {
         [dispatch]
     );
 
-    const onLoginClick = useCallback(() => {
-        void dispatch(loginByUsername({ username, password }));
-    }, [dispatch, username, password]);
+    const onLoginClick = useCallback(async () => {
+        const result = await dispatch(loginByUsername({ username, password }));
+        if (result.meta.requestStatus === "fulfilled") {
+            onSuccess();
+        }
+    }, [dispatch, username, password, onSuccess]);
 
     return (
         <DynamicModuleLoader

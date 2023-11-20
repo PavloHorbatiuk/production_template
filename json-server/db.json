@@ -26,6 +26,13 @@
 		}
 	],
 	"profile": {
-		"name": "typicode"
+		"first": "Pasha",
+		"lastname": "Horbatiuk",
+		"age": "36",
+		"currency": "UA",
+		"country": "UA",
+		"city": "Kiev",
+		"username": "admin",
+		"avatar": "https://i.pravatar.cc/300"
 	}
 }

@@ -4,16 +4,17 @@ import { classNames } from "shared/lib/classNames/classNames";
 import { Button } from "shared/ui";
 import { ButtonTheme } from "shared/ui/Button/Button";
 import LanguageIcon from "../assets/icons/language_icon.svg";
+import React from "react";
 
 interface LangSwitcherProps {
     className?: string;
     isIconShow?: boolean;
 }
 
-export const LangSwitcher = ({
+export const LangSwitcher = React.memo(function LangSwitcher({
     className,
     isIconShow,
-}: LangSwitcherProps): JSX.Element => {
+}: LangSwitcherProps) {
     const { t, i18n } = useTranslation();
     const toggle = async (): Promise<void> => {
         await i18n.changeLanguage(i18n.language === "ua" ? "en" : "ua");
@@ -27,4 +28,4 @@ export const LangSwitcher = ({
             </Button>
         </div>
     );
-};
+});

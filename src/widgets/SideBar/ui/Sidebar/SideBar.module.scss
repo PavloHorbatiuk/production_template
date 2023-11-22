@@ -6,6 +6,20 @@
 	transition: 0.3s;
 }
 
+.item {
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.icon {
+	width: 25px;
+	height: 25px;
+	margin-right: 10px;
+	margin-left: 10px;
+	fill: var(--secondary-color);
+}
+
 .switchers {
 	position: absolute;
 	bottom: 20px;
@@ -30,24 +44,14 @@
 	margin-top: 20px;
 }
 
-.item {
-	display: flex;
-	align-items: center;
-	margin-top: 10px;
-}
+
 
 .link {
 	margin-left: 10px;
 	opacity: 1;
 }
 
-.icon {
-	width: 25px;
-	height: 25px;
-	margin-right: 10px;
-	margin-left: 10px;
-	fill: var(--secondary-color);
-}
+
 
 .collapsed {
 	width: var(--sidebar-width-collapsed);

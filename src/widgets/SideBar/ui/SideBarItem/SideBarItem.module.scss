@@ -1,0 +1,25 @@
+.item {
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.icon {
+	width: 25px;
+	height: 25px;
+	margin-right: 10px;
+	margin-left: 10px;
+	fill: var(--secondary-color);
+}
+
+.collapsed {
+	.link {
+		width: 0;
+		opacity: 0;
+		transition: 0.2s opasity;
+	}
+
+	.item {
+		justify-content: center;
+	}
+}

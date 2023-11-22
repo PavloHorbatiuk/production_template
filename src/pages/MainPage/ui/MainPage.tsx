@@ -7,7 +7,7 @@ const MainPage = (): JSX.Element => {
 
     return (
         <div>
-            {t("Main Page")}
+            {t("Main page")}
             <BugButton />
             <Counter />
         </div>

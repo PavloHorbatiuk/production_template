@@ -7,6 +7,7 @@ import {
 } from "@reduxjs/toolkit";
 import { type CounterSchema } from "app/entities/Coutner";
 import { type UserSchema } from "app/entities/User";
+import { type ProfileSchema } from "entities/Profile";
 import { type LoginSchema } from "features/ui";
 
 export interface StateSchema {
@@ -15,6 +16,7 @@ export interface StateSchema {
 
     // Async reducers
     login?: LoginSchema;
+    profile?: ProfileSchema;
 }
 export type StateSchemaKey = keyof StateSchema;
 

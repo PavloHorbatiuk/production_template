@@ -9,5 +9,6 @@
 	"Enter username": "Enter username",
 	"Enter password": "Enter password",
 	"Wrong login or password": "Wrong login or password",
-	"Login": "Login"
+	"Login": "Login",
+	"Profile": "Profile"
 }

@@ -5,11 +5,14 @@ import ThemeIcon from "shared/assets/icons/themeSvg.svg";
 import { Button } from "shared/ui";
 import { ButtonTheme } from "shared/ui/Button/Button";
 import { Theme } from "app/providers/ThemeProvider/lib/ThemeContext";
+import React from "react";
 
 interface ThemeSwitcherProps {
     className?: string;
 }
-const ThemeSwitcher = ({ className }: ThemeSwitcherProps): JSX.Element => {
+const ThemeSwitcher = React.memo(function ThemeSwitcher({
+    className,
+}: ThemeSwitcherProps) {
     const { theme, toggleTheme } = useTheme();
     const setColor =
         theme === Theme.DARK ? `${cls.lightIcon}` : `${cls.darkIcon}`;
@@ -23,6 +26,6 @@ const ThemeSwitcher = ({ className }: ThemeSwitcherProps): JSX.Element => {
             <ThemeIcon className={classNames(cls.icon, {}, [setColor])} />
         </Button>
     );
-};
+});
 
 export default ThemeSwitcher;
